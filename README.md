@@ -10,9 +10,19 @@ To write a C Program to find area of rectangle using pointer.
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
 
+int main() {
+  int l,b;
+  scanf("%d%d",&l,&b);
+  int *p1=&l,*p2=&b;
+  printf("Area of rectangle = %d sq.units",*p1*(*p2));
+  
+}
+```
 ## OUTPUT
-		       	
+![alt text](image.png)	       	
 
 
 ## RESULT
@@ -34,9 +44,19 @@ To write a C Program to print 'WELCOME' using malloc() and free().
 6.	Stop the program.
 
 ## PROGRAM
-
+```
+#include <stdio.h>
+#include<stdlib.h>
+int main() {
+  char *str;
+  str=(char*)malloc(10*sizeof(char));
+  str="WELCOME";
+  printf("%s",str);
+  
+}
+```
 ## OUTPUT
-
+![alt text](image-1.png)
 
 
 ## RESULT
@@ -60,10 +80,22 @@ To write a C Program to store the student information and display it using struc
 4.	Stop the program.
 
 ## PROGRAM
-
+```
+#include <stdio.h>
+struct student{
+    int rollno;
+    char name[50];
+    int mark;
+};
+int main() {
+  struct student s1;
+  scanf("%d%s%d",&s1.rollno,s1.name,&s1.mark);
+  printf("Rollno: %d\nName: %s\nMarks: %d",s1.rollno,s1.name,s1.mark);
+}
+```
 
 ## OUTPUT
-
+![alt text](image-2.png)
 
 ## RESULT
 
@@ -87,10 +119,32 @@ To write a C Program to read and store the data of 3 employees and calculate the
 5.	Stop the program.
 
 ## PROGRAM
-
+```
+#include <stdio.h>
+struct employee{
+    int id;
+    float sal,da,hra,gross;
+};
+int main() {
+  struct employee e[3];
+  for(int i=0;i<3;i++)
+  {
+      scanf("%d%f",&e[i].id,&e[i].sal);
+  }
+  for(int i=0;i<3;i++){
+      e[i].da=e[i].sal*0.1;
+      e[i].hra=e[i].sal*0.3;
+      e[i].gross=e[i].sal+e[i].da+e[i].hra;
+  }
+  for(int i=0;i<3;i++)
+  {
+      printf("Gross salary of employee id %d = %.2f\n",e[i].id,e[i].gross);
+  }
+}
+```
 
  ## OUTPUT
-
+![alt text](image-3.png)
  
 
 ## RESULT
@@ -134,10 +188,36 @@ Step 7: Output Loop (i = 0 to 1):
 Step 8: End the program.
 
 ## PROGRAM
-
+```
+#include <stdio.h>
+struct student{
+    int rollno;
+    char name[50];
+    int sub[5],tot;
+};
+int main() {
+  struct student s[2];
+  for(int i=0;i<2;i++)
+  {
+      scanf("%d",&s[i].rollno);
+      for(int j=0;j<5;j++)
+      scanf("%d",&s[i].sub[j]);
+  }
+  for(int i=0;i<2;i++){
+     for(int j=0;j<5;j++)
+     {
+       s[i].tot+=s[i].sub[j];  
+     }
+  }
+  for(int i=0;i<2;i++)
+  {
+     printf("Total of student %d = %d\n",s[i].rollno,s[i].tot);
+  }
+}
+```
 
 ## OUTPUT
-
+![alt text](image-4.png)
  
 
 ## RESULT
