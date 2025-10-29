@@ -22,7 +22,8 @@ int main() {
 }
 ```
 ## OUTPUT
-![alt text](image.png)	       	
+<img width="550" height="189" alt="Screenshot 2025-10-18 230130" src="https://github.com/user-attachments/assets/b9f996bf-8925-493d-9c75-b81c44176251" />
+       	
 
 
 ## RESULT
